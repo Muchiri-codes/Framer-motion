@@ -19,6 +19,7 @@ const Header = () => {
       <motion.div className="title"
       initial={{y:-250}} //animate from
       animate= {{y:-10}}//animate to
+      transition= {{delay: 0.2, type:'spring', stiffness:120}}//manner of animation
       >
         <h1>Pizza Joint</h1>
       </motion.div>
