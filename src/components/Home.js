@@ -4,11 +4,15 @@ import { motion } from 'framer-motion';
 
 
 const buttonVariant = {
-  
   hover: {
-    scale: [1, 1.2, 1, 1.2, 1, 1.2, 1],
+    scale: 1.1,
     textShadow: '0px 0px 8px rgb(255,255,255)',
-    boxShadow: "0px 0px 8px rgb(255,255,255)"
+    boxShadow: "0px 0px 8px rgb(255,255,255)",
+    transition:{
+      repeat: Infinity,
+      repeatTypte:"forward",
+      duration:0.5
+    }
   }
 }
 const Home = () => {
