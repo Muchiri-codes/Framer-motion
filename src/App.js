@@ -33,7 +33,7 @@ function App() {
     <>
       <Header />
       <Model showModel={showModel} setShowModel={setShowModel}/>
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence exitBeforeEnter onExitComplete={() =>setShowModel(false)}>
         <Routes location={location} key={location.key}>
           <Route path="/base" element={<Base addBase={addBase} pizza={pizza} />} />
           <Route path="/toppings" element={<Toppings addTopping={addTopping} pizza={pizza} />} />
