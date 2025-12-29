@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import { motion } from 'framer-motion';
 
 
@@ -34,7 +34,13 @@ const childVariants = {
     opacity: 1
   }
 }
-const Order = ({ pizza }) => {
+const Order = ({ pizza, setShowModel }) => {
+
+  useEffect(() =>{
+    setTimeout(() =>{
+      setShowModel(true)
+    },5000)
+  }, [setShowModel])
   return (
     <motion.div className="container order"
       variants={containerVariants}
@@ -43,10 +49,6 @@ const Order = ({ pizza }) => {
       exit ="exit"
     >
       <h2>Thank you for your order :)</h2>
-
-
-
-
       <motion.p variants={childVariants}>You ordered a {pizza.base} pizza with:</motion.p>
 
       <motion.div
