@@ -33,7 +33,6 @@ const Model = ({ showModel, setShowModel }) => {
           variants={modalVariants} 
           >
             <p>Want to make another pizza?</p>
-
             <Link to='/'>
               <button>Create a pizza</button>
             </Link>

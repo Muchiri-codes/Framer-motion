@@ -37,9 +37,10 @@ const childVariants = {
 const Order = ({ pizza, setShowModel }) => {
 
   useEffect(() =>{
-    setTimeout(() =>{
+   const timer = setTimeout(() =>{
       setShowModel(true)
-    },5000)
+    },5000);
+    return() =>clearTimeout(timer)
   }, [setShowModel])
   return (
     <motion.div className="container order"
